@@ -1,0 +1,200 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#leftside {
+    min-height: 100vh;
+    background-color: rgb(77, 192, 154);
+}
+
+#rightside {
+    min-width: 0;
+    min-height: 100vh;
+    background-color: rgb(238, 226, 192);
+}
+
+#container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.7em;
+}
+
+header {
+    background-color: rgba(231, 229, 229, 0.5);
+    color: rgb(216, 150, 7);
+}
+
+header blog-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.75rem;
+}
+
+.blog-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.blog-navigation a {
+    color: red;
+    text-decoration: none;
+}
+
+.blog-navigation a:hover {
+    text-decoration: underline;
+}
+
+main #photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.75em 0;
+    border: 0.5em solid white;
+}
+
+
+main h2 {
+    position: static;
+    margin: 0 0 1.5rem;
+    color: rgb(60, 190, 160);
+    text-transform: uppercase;
+}
+
+
+section#blogposts {
+    position: static;
+    padding: 0;
+}
+
+main .post {
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    border: 2px solid rgba(83, 78, 58, 0.6);
+    border-radius: 0.5em;
+    overflow-wrap: anywhere;
+}
+
+.post p {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.date {
+    font-size: 0.9rem;
+}
+
+.reply {
+    margin-left: 0.5rem;
+}
+
+/* Clickable profile image */
+.profile-image {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.profile-image:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* Author information modal */
+.author-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.author-modal-content {
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.95);
+    color: white;
+    width: 320px;
+    max-width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.author-modal-content h2 {
+    position: static;
+    margin: 0 25px 20px 0;
+    color: white;
+    text-transform: none;
+    font-size: 20px;
+}
+
+.author-modal-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button {
+    cursor: pointer;
+    padding: 5px 12px;
+}
+
+@media (max-width: 767.98px) {
+    #leftside {
+        min-height: 80px;
+    }
+
+    #rightside {
+        min-height: auto;
+    }
+
+    .blog-navigation {
+        margin-top: 0.75rem;
+        gap: 10px;
+    }
+
+    header blog-title {
+        font-size: 2.25rem;
+    }
+
+    main .post {
+        padding: 1rem;
+    }
+}
